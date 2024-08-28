@@ -1,0 +1,14 @@
+<h1>Header Component</h1>
+<sly data-sly-use.obj="${'com.adobe.aem.guides.project2.core.models.HeaderSlingModel' @htlattribute='Hello'}">
+  <div>Path Field: ${obj.pathField}</div>
+  <div>Text Field: ${obj.textField}</div>
+  <div>Check Box: ${obj.checkBox}</div>
+  <div>Hello:${obj.Hello}</div>
+
+  <div>**********multiField*****************</div>
+  <sly data-sly-list.item="${obj.multiField}">
+        <p>Date Picker: ${item.datePicker}</p>
+        <p>text:${item.multiText}</p>
+  </sly>
+</sly>
+

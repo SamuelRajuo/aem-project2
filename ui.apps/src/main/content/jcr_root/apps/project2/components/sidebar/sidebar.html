@@ -1,0 +1,26 @@
+<h1>SideBar Component</h1>
+<div data-sly-use.one="com.adobe.aem.guides.project2.core.models.SidebarSling">
+    <div>*******Tab1********</div>
+    <div>Logo path: ${one.logoPath}</div>
+    <div>Logo Mobile path: ${one.logoMobilePath}</div>
+    <div>Logo Link: ${one.logoLink}</div>
+    <div>Enable Switch: ${one.enableSwitch}</div>
+    
+    <div>*******Tab2*******</div>
+    <div data-sly-list.two="${one.tabMultiField}">
+        <p>Name: ${two.name}</p>
+        <img src="${two.image}" alt="image" width="150" height="200"/>
+    </div>
+    
+    <div>************Tab3*************</div>
+    <div data-sly-list.three="${one.sideBarMulti}">
+        <p>Desktop Icon: ${three.desktopIcon}</p>
+        <p>Mobile Icon: ${three.mobileIcon}</p>
+        <div data-sly-list.four="${three.nestedMultiField}">
+            <p>Navigation URL: ${four.navigationURL}</p>
+        </div>
+    </div>
+    
+    <div>**********Tab4***********</div>
+    <div>Country: ${one.country}</div>
+</div>

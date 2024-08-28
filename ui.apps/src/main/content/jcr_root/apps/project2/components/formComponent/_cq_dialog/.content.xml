@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="User Details"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    dialogRoot="/apps/project/components">
+
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/layouts/fixedcolumns"/>
+
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+
+                <items jcr:primaryType="nt:unstructured">
+                    <name
+                        jcr:primaryType="nt:unstructured"
+                        fieldLabel="Name"
+                        name="./name"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+
+                    <email
+                        jcr:primaryType="nt:unstructured"
+                        fieldLabel="Email"
+                        name="./email"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+
+                    <mobile
+                        jcr:primaryType="nt:unstructured"
+                        fieldLabel="Mobile"
+                        name="./mobile"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

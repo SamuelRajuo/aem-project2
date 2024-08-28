@@ -1,0 +1,11 @@
+<h1>nestedMultifield</h1>
+<div data-sly-use.carouselSlingModel="com.adobe.aem.guides.project2.core.models.CarouselSlingModel">
+    <div data-sly-list.item="${carouselSlingModel.carouselItems}">
+        <p>path: ${item.path}</p>
+        <p>text: ${item.text}</p>
+        <div data-sly-list.nestedItem="${item.nestedMultifield}">
+            <p>nested text: ${nestedItem.nestedText}</p>
+             <p>
+        </div>
+    </div>
+</div>
