@@ -1,0 +1,20 @@
+<sly data-sly-use.model="com.adobe.aem.guides.project2.core.models.HeaderComponentModel">
+    <header style="background-color: #333; padding: 10px 0;">
+        <div style="text-align: center; margin-bottom: 10px;">
+            <!-- Render Logo -->
+            <img src="${model.logo @ context='uri'}" alt="Logo" style="max-height: 50px;"/>
+        </div>
+        <nav>
+            <ul style="list-style-type: none; margin: 0; padding: 0; display: flex; justify-content: center;">
+                <!-- Iterate over tab items -->
+                <sly data-sly-list.tabItems="${model.tabItems}">
+                    <li style="margin: 0 15px;">
+                        <a href="${tabItem.tabLink}" style="color: white; text-decoration: none; font-size: 16px;">
+                            ${tabItem.tabTitle}
+                        </a>
+                    </li>
+                </sly>
+            </ul>
+        </nav>
+    </header>
+</sly>
