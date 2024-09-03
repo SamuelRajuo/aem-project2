@@ -6,11 +6,10 @@
         </div>
         <nav>
             <ul style="list-style-type: none; margin: 0; padding: 0; display: flex; justify-content: center;">
-                <!-- Iterate over tab items -->
                 <sly data-sly-list.tabItems="${model.tabItems}">
                     <li style="margin: 0 15px;">
-                        <a href="${tabItem.tabLink}" style="color: white; text-decoration: none; font-size: 16px;">
-                            ${tabItem.tabTitle}
+                        <a href="${tabItems.tabLink @ context='uri'}" style="color: white; text-decoration: none; font-size: 16px;">
+                            ${tabItems.tabTitle}
                         </a>
                     </li>
                 </sly>
