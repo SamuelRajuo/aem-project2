@@ -32,7 +32,7 @@ public class Ajaxcall extends SlingAllMethodsServlet {
     protected void doGet(SlingHttpServletRequest req, SlingHttpServletResponse res) {
         try {
             ResourceResolver resolver = req.getResourceResolver();
-            Resource usersNode = resolver.getResource("/content/capstone/us/en/jcr:content/users");
+            Resource usersNode = resolver.getResource("/content/project2/us/en/jcr:content/users");
 
             if (usersNode != null) {
                 JSONArray usersArray = new JSONArray();

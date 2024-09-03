@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "java",
+        "name": "Debug Sling Model",
+        "request": "attach",
+        "hostName": "localhost",
+        "port": 4502,
+        "projectName": "aem-guides-project2"
+      }
+    ]
+  }
+  
