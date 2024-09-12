@@ -37,5 +37,8 @@
     "pretest-cloud": "npm run lint",
     "test-cloud": "wdio run wdio.conf.cloud.js",
     "clean": "rm -rf node_modules reports"
+  },
+  "dependencies": {
+    "aem-cloud-wdio-sample-project": "file:"
   }
 }
