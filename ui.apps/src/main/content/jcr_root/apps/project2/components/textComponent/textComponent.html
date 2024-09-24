@@ -1,0 +1,12 @@
+<div class="text-to-speech-component">
+    <div class="input-wrapper">
+        <p>${properties.text @ context='html'}</p>
+    </div>
+
+
+
+    <button id="convert-btn">Convert to Speech</button>
+    <audio id="audio-output" controls></audio>
+</div>
+<script src="${resource.path}/text-to-speech.js"></script>
+<link rel="stylesheet" href="${resource.path}/text-to-speech.css" />
