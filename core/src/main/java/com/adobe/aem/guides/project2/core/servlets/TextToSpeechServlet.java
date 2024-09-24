@@ -26,7 +26,6 @@ public class TextToSpeechServlet extends SlingAllMethodsServlet {
 
     @Override
     protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response) throws IOException {
-        // Reading parameters from the request (fall back to defaults if not provided)
         String text = request.getParameter("text") != null ? request.getParameter("text") : "Hey its me, Suneetha";
         String voiceCode = request.getParameter("voice_code") != null ? request.getParameter("voice_code") : "en-US-1";
         String speed = request.getParameter("speed") != null ? request.getParameter("speed") : "1.00";
