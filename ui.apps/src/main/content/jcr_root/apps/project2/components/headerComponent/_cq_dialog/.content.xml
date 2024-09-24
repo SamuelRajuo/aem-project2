@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="nt:unstructured"
     jcr:title="Header Configuration"
     sling:resourceType="cq/gui/components/authoring/dialog"
-    dialogMode="floating"
-    helpPath="en/experience-manager/6-5/sites-authoring/default-components/dialogs.html">
+    dialogMode="floating">
+
     <content
         jcr:primaryType="nt:unstructured"
         sling:resourceType="granite/ui/components/coral/foundation/container">
@@ -12,35 +15,43 @@
             jcr:primaryType="nt:unstructured"
             sling:resourceType="granite/ui/components/coral/foundation/layouts/fixedcolumns"/>
         <items jcr:primaryType="nt:unstructured">
+            <!-- Logo Field -->
             <logo
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
                 fieldLabel="Logo"
                 name="./logo"
-                required="true"/>
+                required="{Boolean}true"/>
+
+            <!-- Tabs Multifield -->
             <tabs
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
-                composite="{Boolean}true"
                 fieldLabel="Tabs"
-                name="./tabs">
+                name="./tabs"
+                composite="{Boolean}true">
                 <field
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset"
-                    name="./tabItem">
+                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                    <layout
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/layouts/fixedcolumns"/>
                     <items jcr:primaryType="nt:unstructured">
+                        <!-- Tab Title Field -->
                         <tabTitle
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                             fieldLabel="Tab Title"
                             name="./tabTitle"
-                            required="true"/>
+                            required="{Boolean}true"/>
+
+                        <!-- Tab Link Field -->
                         <tabLink
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
                             fieldLabel="Tab Link"
                             name="./tabLink"
-                            required="true"/>
+                            required="{Boolean}true"/>
                     </items>
                 </field>
             </tabs>
